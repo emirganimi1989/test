@@ -26,12 +26,9 @@
                   </ion-list>
                 </ion-col>
                 <ion-col col-10 offset-1>
-                  <button ion-button block round outline color="light" type="submit" >Ingresar</button>
+                  <button ion-button block round outline color="light" [disabled]="!formUser.valid" type="submit" >Ingresar</button>
               </ion-col>
               </ion-row>
-              <ion-row>
-              </ion-row>
-    
         </form>
       </ion-grid>
       </div>
