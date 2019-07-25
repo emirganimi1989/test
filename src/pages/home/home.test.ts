@@ -44,5 +44,6 @@ describe('Testing home', () => {​
         component.task = "emir";
         component.addTask();
         expect(component.tasks).toEqual([{"isChecked": false, "name": "emir"}]);​
+        expect(component.task).toEqual('');​
     });​
 });

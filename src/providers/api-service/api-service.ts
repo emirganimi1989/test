@@ -17,7 +17,7 @@ export class ApiService {
     console.log('Hello ApiService Provider');
   }
 
-  postLogin(email: string, password: string){
+  public postLogin(email: string, password: string){
    return this.http.post('https://private-519b16-test12643.apiary-mock.com/login', {email: email, password: password}).map(res => res.json()).catch((error: any) => Observable.throw(JSON.parse(error._body) || error));
   }
 
