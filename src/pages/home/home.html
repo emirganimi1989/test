@@ -1,14 +1,30 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      TODO
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="div-tasks">
+      <!--<h1 class="title-tasks">Ingresa la tarea a realizar</h1>-->
+      <button class="button-add-task" (click)="addTask()">+</button>
+      <ion-input class="input-tasks" [(ngModel)]="task" placeholder="Escribe la nota aquí"></ion-input>
+  </div>
+  <div class="div-tasks">
+      <h1 class="title-tasks">Tareas</h1>
+      <ion-icon name="trash" (click)="deleteTasks()" class="clean-task"></ion-icon>
+  </div>
+  <div class="div-tasks scroll-div-tasks">
+    <ion-list>
+      <ion-item class="item-list-task" *ngFor="let task of tasks; let i=index">
+          <ion-checkbox [(ngModel)]="task.isChecked" color="pink-grand"></ion-checkbox>
+          <ion-label>
+              <h1 class="title-task">{{task.name}}</h1>
+              <h3 class="subtitle-task">Hoy</h3>
+          </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
