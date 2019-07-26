@@ -18,15 +18,15 @@
                  <ion-col col-10 offset-1 class="center-align">
                   <ion-list>
                     <ion-item>
-                      <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+                      <ion-input id="email-login" type="email" placeholder="Email" formControlName="email"></ion-input>
                     </ion-item>
                     <ion-item>
-                      <ion-input type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+                      <ion-input id="password-login" type="password" placeholder="Contraseña" formControlName="password"></ion-input>
                     </ion-item>
                   </ion-list>
                 </ion-col>
                 <ion-col col-10 offset-1>
-                  <button ion-button block round outline color="light" [disabled]="!formUser.valid" type="submit" >Ingresar</button>
+                  <button id="button-login" ion-button block round outline color="light" [disabled]="!formUser.valid" type="submit" >Ingresar</button>
               </ion-col>
               </ion-row>
         </form>
